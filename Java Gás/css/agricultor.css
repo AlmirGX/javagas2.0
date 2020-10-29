@@ -1,0 +1,218 @@
+body{
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-func {
+    color: #fff;
+    background-color: #074dff;
+    border-color: #063c90;
+}
+.btn-comp{
+
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #070eff;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-comp:hover{
+
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:#0072ff;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-comp2{
+
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:red;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-comp2:hover{
+
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:#960000;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+img{
+	
+	height:20vh;
+	width:40%;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: -3rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+/*NavBar*/
+
+#verde{
+   background: rgb(16,0,255);
+background: linear-gradient(0deg, rgba(16,0,255,1) 27%, rgba(0,0,0,1) 100%);
+    height: 140vh;
+    width: 100%;
+}
+
+#navbarSupportedContent{
+    justify-content: space-between;
+}
+
+#navbarSupportedContent form{
+    margin-left: 30vw;
+}
+
+#navbarSupportedContent form input{
+    width: 14vw;
+}
+
+#nav_but{
+    border-color: white;
+}
+
+#nav_but:hover{
+    outline: none;
+}
+
+#nav_img{
+    filter: invert(1);
+}
+
+#adicionar{
+    margin-right: 1vw;
+}
+
+#adicionarfunc{
+    margin-right: 1vw;
+}
+
+/*Main*/
+
+#fundo{
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 90%;
+    height: 80%;
+    margin-left: 5vw;
+    padding: 2vh;
+    margin-top: 2vh;
+    border-radius: 10px;
+    position: absolute;
+    overflow: auto;
+}
+
+#titulo{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    font-weight: 700;
+}
+
+#carta{
+    flex-direction: row;
+    padding: 15px 20px;
+    background-color: white;
+    border: none;
+}
+
+.editar{
+    margin-left: 5.5vw;
+    position: absolute;
+    right: 1vw;
+    background-color:#6f70f7;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.editar .img{
+    padding: 5px 10px 8px;
+}
+
+.card img{
+    width: 100px;
+    margin-top: 20px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5vh 0vw 0vh 3vw;
+}
+
+#Estoque{
+    font-weight: bold;
+}
+
+#conteudo{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+footer{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 2vh;
+    margin-top: 5vh;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

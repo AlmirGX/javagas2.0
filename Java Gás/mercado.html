@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Gás Comprar - Adquira seu gàs.</title>
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/mercado.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/@mediaMercado.css">
+    <link rel="stylesheet" href="css/@mediaAgr.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Overlay -->
+    <div id="laranja">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#" id="logo">
+                
+                 <img src="img/logo12.svg" alt="Logo Natural Foods">
+            </a>
+            <button id="nav_but" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span id="nav_img" class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Pesquisar -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0" id="form">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Procurar ..." aria-label="Search"
+                        id="search">
+                    <button class="btn btn-secondary my-2 my-sm-0 material-icons" type="submit">
+                        search
+                    </button>
+                </form>
+                <div>
+                    <!-- Carrinho de compras -->
+                    <div id="carrinho-compras">
+
+                        <svg class="bi bi-basket2" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                            type="button" class="btn btn-secondary dropdropdown-toggle" data-toggle="dropdown"
+                            data-display="static" aria-haspopup="true" aria-expanded="false"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M1.111 7.186A.5.5 0 0 1 1.5 7h13a.5.5 0 0 1 .489.605l-1.5 7A.5.5 0 0 1 13 15H3a.5.5 0 0 1-.489-.395l-1.5-7a.5.5 0 0 1 .1-.42zM2.118 8l1.286 6h9.192l1.286-6H2.118z" />
+                            <path fill-rule="evenodd"
+                                d="M11.314 1.036a.5.5 0 0 1 .65.278l2 5a.5.5 0 1 1-.928.372l-2-5a.5.5 0 0 1 .278-.65zm-6.628 0a.5.5 0 0 0-.65.278l-2 5a.5.5 0 1 0 .928.372l2-5a.5.5 0 0 0-.278-.65z" />
+                            <path
+                                d="M4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zM0 6.5A.5.5 0 0 1 .5 6h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1z" />
+                        </svg>
+                        <span id="totalQuantity">0</span>
+                        <!-- Menu para o carrinho -->
+                        <div class="dropdown-menu dropdown-menu-lg-right">
+                            <h3 class="tit" style="text-align:center">Produtos</h3>
+                            <div class="dropdown-divider"></div>
+                            <!--list of the articles in the cart-->
+                            <ul style="list-style-type: none" id="items">
+                            </ul>
+                            <div class="dropdown-divider"></div>
+                            <h3 id="total" style="text-align: right;">Total: 0 $</h3>
+							
+							 <a href="pagamento.html"><button id="comprar"
+                            class="btn1">Finalizar Compra</button></a>
+                        </div>
+                    </div>
+
+                    <!-- Sair -->
+                    <a href="index.html"><button id="sair"
+                            class="btn btn-success my-2 my-sm-0 material-icons">exit_to_app</button></a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="dropdown-divider"></div>
+
+        </div>
+        <main>
+
+            <div id="fundo">
+                <div class="container-fluid">
+
+                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+
+                        <!-- Produtos -->
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p4.jpg" id="img1" class="card-img-top" alt="Abóboras">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product1">NacionalGás - Gás 45kg</p>
+                                        <span><sup>R$</sup><a class="price" id="price1">150.00</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty1" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(1)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="info2-produtos">
+                                      
+                                        <p>Estoque: <span class="estoque-produto" id="stock1">18</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p-5.jpeg" id="img2" class="card-img-top" alt="Banana">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product2">Ultragás - Gás 5kg</p>
+                                        <span><sup>R$</sup><a class="price" id="price2">30.00</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty2" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(2)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="info2-produtos">
+                                        
+                                        <p>Estoque: <span class="estoque-produto" id="stock2">10</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p-10.jpeg" id="img3" class="card-img-top" alt="Beringela">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product3">Ultragás - Gás 13kg</p>
+                                        <span><sup>R$</sup><a class="price" id="price3">70.00</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty3" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(3)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="info2-produtos">
+                                       
+                                        <p>Estoque: <span class="estoque-produto" id="stock3">50</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p-20.jpeg" id="img4" class="card-img-top" alt="Brócolis">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product4">Ultragás - 45kg</p>
+                                        <span><sup>R$</sup><a class="price" id="price4">80.50</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty4" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(4)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="info2-produtos">
+
+                                        <p>Estoque: <span class="estoque-produto" id="stock4">13</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p-90.jpeg" id="img5" class="card-img-top" alt="Cebola">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product5">Cilindro Ultragás</p>
+                                        <span><sup>R$</sup><a class="price" id="price5">150.00</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty5" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(5)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="info2-produtos">
+                                     
+                                        <p>Estoque: <span class="estoque-produto" id="stock5">9</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p-2.jpeg" id="img6" class="card-img-top" alt="Cenoura">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product6">Ultragás - 5kg</p>
+                                        <span><sup>R$</sup><a class="price" id="price6">24.00</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty6" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(6)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="info2-produtos">
+                                        
+                                        <p>Estoque: <span class="estoque-produto" id="stock6">20</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p6.jpeg" id="img7" class="card-img-top" alt="Ervilha">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product7">LiquiGás - 50 kg</p>
+                                        <span><sup>R$</sup><a class="price" id="price7">69.90</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty7" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(7)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="info2-produtos">
+                                    
+                                        <p>Estoque: <span class="estoque-produto" id="stock7">14</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p7.jpeg" id="img8" class="card-img-top" alt="Milho">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product8">LiquiGás - 90 kg</p>
+                                        <span><sup>R$</sup><a class="price" id="price8">145.90</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty8" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(8)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="info2-produtos">
+                                        
+                                        <p>Estoque: <span class="estoque-produto" id="stock8">50</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card" id="carta">
+                                <img src="img/produtos/p-90.jpeg" id="img9" class="card-img-top" alt="Morango">
+                                <div class="info">
+                                    <div class="valor">
+                                        <p class="card-title" id="product9">Cilindro Ultragás</p>
+                                        <span><sup>R$</sup><a class="price" id="price9">149.50</a></span>
+                                    </div>
+                                    <div class="qtdcarrinho">
+                                        <div class="quantidade-produtos">
+                                            <button type="button" class="buttons qty-minus" value="-"
+                                                style="border-radius: 8px 0 0 8px;">-</button>
+                                            <input min="0" max="1000" step="1" type="number" value="1" class="qty"
+                                                id="qty9" />
+                                            <button type="button" class="buttons qty-plus" value="+"
+                                                style="border-radius: 0 8px 8px 0;">+</button>
+                                        </div>
+                                        <div class="carrinho">
+                                            <button type="button" class="btn" onclick="add(9)">
+                                                <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16"
+                                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+									 <div class="info2-produtos">
+                                       
+                                        <p>Estoque: <span class="estoque-produto" id="stock8">50</span></p>
+                                    </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="foot">
+            <span>2020 © Natural Foods LTDA.</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+        //Botão de navBar Mobile
+        var btnNav = document.getElementById('nav_but');
+
+        btnNav.addEventListener('click', function () {
+            var footer = document.getElementById('foot');
+            if (footer.style.display === 'none') {
+                setTimeout(function () {
+                    footer.style.display = 'unset';
+                }, 200);
+            } else {
+                footer.style.display = 'none';
+            }
+        });
+
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="./js/qtdProduto.js"></script>
+    <script src="./js/adicionarCarrinho.js"></script>
+</body>
+
+</html>

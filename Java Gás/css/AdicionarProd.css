@@ -1,0 +1,25 @@
+#verde{
+    height: 127vh;
+}
+
+#fundo{
+    height: 80vh;
+}
+
+.buttons{
+    text-align: center;
+}
+
+h1 span{
+    color: #626262;
+}
+
+#preview{
+    width: 10%;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

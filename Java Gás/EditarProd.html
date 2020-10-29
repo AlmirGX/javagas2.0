@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Produto</title>
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/agricultor.css">
+    <link rel="stylesheet" href="css/@mediaAgr.css">
+    <link rel="stylesheet" href="css/AdicionarProd.css">
+    <link rel="stylesheet" href="css/@mediaAdicionarP.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Overlay -->
+    <div id="verde">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="agricultor.html" id="logo">
+                <svg width="130" height="37" viewBox="0 0 130 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.5517 20.2946C12.1961 25.5702 19.0927 26.664 19.0927 26.664C18.8484 18.8904 13.6535 10.9023 13.6535 10.9023C20.8668 18.8887 20.679 29.9121 20.5996 31.6681C19.3094 30.7486 17.633 30.0946 17.633 30.0946C12.1643 19.3114 0 28.4295 0 28.4295C3.71601 27.8727 6.76924 31.5364 10.0799 32.9242C13.6278 34.4111 16.9767 31.4045 16.9767 31.4045C12.3222 28.2756 5.46448 27.8124 5.46448 27.8124C13.8587 27.0947 20.6775 32.7814 20.6775 32.7814L20.7805 32.7169L20.7589 32.8425C21.9837 32.4696 23.6079 31.2504 23.6079 31.2504C32.4894 31.2945 30.3888 20.7255 30.3888 20.7255C29.5588 23.2359 26.1568 23.9705 24.1741 25.6007C22.0495 27.3473 22.9553 30.4166 22.9553 30.4166C26.5201 28.5047 29.0359 24.3523 29.0359 24.3523C27.233 28.7949 23.0024 31.243 21.4444 32.0193C21.7802 29.5936 21.1705 26.293 21.1705 26.293C29.1705 11.215 8.36215 5.36773 8.36215 5.36773C12.1189 9.01927 10.9075 15.0192 11.5517 20.2946Z"
+                        fill="url(#paint0_linear)" />
+                    <path
+                        d="M49.568 20H47.5446L39.86 8.23719V20H37.8367V4.7356H39.86L47.5656 16.5508V4.7356H49.568V20ZM61.7607 16.0162H55.3655L53.9293 20H51.8535L57.6825 4.7356H59.4437L65.2832 20H63.2179L61.7607 16.0162ZM55.9736 14.3597H61.1631L58.5631 7.22026L55.9736 14.3597ZM76.5218 6.39204H71.6154V20H69.613V6.39204H64.7171V4.7356H76.5218V6.39204ZM89.5322 4.7356V15.1146C89.5252 16.5543 89.0709 17.732 88.1693 18.6476C87.2747 19.5632 86.0586 20.0769 84.521 20.1887L83.9863 20.2097C82.3159 20.2097 80.9844 19.7589 79.992 18.8573C78.9995 17.9557 78.4963 16.7151 78.4823 15.1355V4.7356H80.4742V15.0726C80.4742 16.1769 80.7783 17.0366 81.3863 17.6516C81.9944 18.2597 82.861 18.5637 83.9863 18.5637C85.1255 18.5637 85.9957 18.2597 86.5968 17.6516C87.2048 17.0436 87.5088 16.1874 87.5088 15.0831V4.7356H89.5322ZM98.3071 13.825H94.7217V20H92.6983V4.7356H97.7515C99.4708 4.7356 100.792 5.127 101.714 5.90979C102.644 6.69258 103.109 7.83182 103.109 9.3275C103.109 10.278 102.85 11.1063 102.333 11.8122C101.823 12.5181 101.11 13.0458 100.194 13.3952L103.78 19.8742V20H101.62L98.3071 13.825ZM94.7217 12.1791H97.8144C98.8139 12.1791 99.6071 11.9205 100.194 11.4033C100.788 10.8861 101.085 10.1942 101.085 9.3275C101.085 8.38396 100.802 7.66058 100.236 7.15736C99.677 6.65414 98.8663 6.39903 97.8039 6.39204H94.7217V12.1791ZM114.368 16.0162H107.973L106.537 20H104.461L110.29 4.7356H112.051L117.891 20H115.826L114.368 16.0162ZM108.581 14.3597H113.771L111.171 7.22026L108.581 14.3597ZM121.969 18.354H129.203V20H119.946V4.7356H121.969V18.354Z"
+                        fill="white" />
+                    <path
+                        d="M42.1791 29.4262H38.3357V33.4708H37.128V24.3122H42.8018V25.306H38.3357V28.4386H42.1791V29.4262ZM51.2937 29.1871C51.2937 30.0845 51.1427 30.8687 50.8408 31.5397C50.5389 32.2065 50.1111 32.716 49.5576 33.0682C49.004 33.4205 48.3582 33.5966 47.6202 33.5966C46.8989 33.5966 46.2594 33.4205 45.7016 33.0682C45.1439 32.7118 44.7099 32.2065 44.3995 31.5523C44.0934 30.8939 43.9362 30.1328 43.9278 29.2689V28.6084C43.9278 27.7278 44.0808 26.9499 44.387 26.2747C44.6931 25.5996 45.125 25.0838 45.6828 24.7273C46.2447 24.3667 46.8863 24.1863 47.6076 24.1863C48.3415 24.1863 48.9873 24.3646 49.545 24.721C50.1069 25.0733 50.5389 25.587 50.8408 26.2621C51.1427 26.9331 51.2937 27.7152 51.2937 28.6084V29.1871ZM50.0923 28.5958C50.0923 27.5097 49.8742 26.6773 49.4381 26.0986C49.0019 25.5157 48.3918 25.2242 47.6076 25.2242C46.8444 25.2242 46.2426 25.5157 45.8023 26.0986C45.3661 26.6773 45.1418 27.4825 45.1292 28.5141V29.1871C45.1292 30.2397 45.3494 31.0679 45.7897 31.6718C46.2342 32.2715 46.8444 32.5713 47.6202 32.5713C48.4002 32.5713 49.004 32.2882 49.4318 31.7221C49.8595 31.1518 50.0797 30.3362 50.0923 29.2752V28.5958ZM60.1504 29.1871C60.1504 30.0845 59.9995 30.8687 59.6975 31.5397C59.3956 32.2065 58.9679 32.716 58.4143 33.0682C57.8608 33.4205 57.215 33.5966 56.4769 33.5966C55.7556 33.5966 55.1161 33.4205 54.5584 33.0682C54.0006 32.7118 53.5666 32.2065 53.2563 31.5523C52.9501 30.8939 52.7929 30.1328 52.7845 29.2689V28.6084C52.7845 27.7278 52.9376 26.9499 53.2437 26.2747C53.5498 25.5996 53.9818 25.0838 54.5395 24.7273C55.1014 24.3667 55.743 24.1863 56.4643 24.1863C57.1982 24.1863 57.844 24.3646 58.4017 24.721C58.9637 25.0733 59.3956 25.587 59.6975 26.2621C59.9995 26.9331 60.1504 27.7152 60.1504 28.6084V29.1871ZM58.949 28.5958C58.949 27.5097 58.7309 26.6773 58.2948 26.0986C57.8587 25.5157 57.2485 25.2242 56.4643 25.2242C55.7011 25.2242 55.0993 25.5157 54.659 26.0986C54.2229 26.6773 53.9985 27.4825 53.986 28.5141V29.1871C53.986 30.2397 54.2061 31.0679 54.6464 31.6718C55.0909 32.2715 55.7011 32.5713 56.4769 32.5713C57.2569 32.5713 57.8608 32.2882 58.2885 31.7221C58.7163 31.1518 58.9364 30.3362 58.949 29.2752V28.5958ZM61.962 33.4708V24.3122H64.5474C65.3441 24.3122 66.0486 24.4883 66.6609 24.8405C67.2732 25.1928 67.7449 25.6939 68.0762 26.3439C68.4117 26.9939 68.5815 27.7404 68.5857 28.5833V29.1683C68.5857 30.0321 68.418 30.7891 68.0825 31.4391C67.7512 32.0891 67.2753 32.5881 66.6546 32.9361C66.0382 33.2842 65.319 33.4624 64.497 33.4708H61.962ZM63.1698 25.306V32.4832H64.4404C65.3714 32.4832 66.0948 32.1939 66.6106 31.6152C67.1306 31.0365 67.3906 30.2125 67.3906 29.1431V28.6084C67.3906 27.5684 67.1453 26.7612 66.6546 26.1867C66.1682 25.608 65.4762 25.3144 64.5788 25.306H63.1698ZM73.1147 29.3884C72.0789 29.0907 71.3241 28.7258 70.8502 28.2939C70.3806 27.8578 70.1457 27.321 70.1457 26.6836C70.1457 25.9623 70.433 25.3668 71.0075 24.8972C71.5862 24.4233 72.3368 24.1863 73.2594 24.1863C73.8884 24.1863 74.4483 24.308 74.9389 24.5512C75.4338 24.7944 75.8154 25.1299 76.0838 25.5576C76.3563 25.9854 76.4926 26.453 76.4926 26.9604H75.2786C75.2786 26.4068 75.1025 25.9728 74.7502 25.6583C74.398 25.3396 73.901 25.1802 73.2594 25.1802C72.6639 25.1802 72.1985 25.3123 71.863 25.5765C71.5317 25.8365 71.366 26.1992 71.366 26.6647C71.366 27.0379 71.5233 27.3546 71.8378 27.6146C72.1565 27.8704 72.6954 28.1052 73.4544 28.3191C74.2176 28.5329 74.8131 28.7699 75.2409 29.0299C75.6728 29.2857 75.9915 29.5855 76.197 29.9294C76.4067 30.2733 76.5115 30.6779 76.5115 31.1434C76.5115 31.8857 76.2221 32.4812 75.6434 32.9299C75.0647 33.3744 74.291 33.5966 73.3223 33.5966C72.6933 33.5966 72.1062 33.4771 71.561 33.2381C71.0159 32.9949 70.5944 32.6636 70.2967 32.2442C70.0031 31.8249 69.8564 31.3489 69.8564 30.8163H71.0704C71.0704 31.3699 71.2738 31.8081 71.6806 32.131C72.0915 32.4497 72.6388 32.6091 73.3223 32.6091C73.9597 32.6091 74.4483 32.4791 74.788 32.2191C75.1276 31.9591 75.2975 31.6047 75.2975 31.156C75.2975 30.7073 75.1402 30.3613 74.8257 30.1181C74.5112 29.8707 73.9409 29.6275 73.1147 29.3884Z"
+                        fill="#F28724" />
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="-0.000116542" y1="19.3525" x2="30.6054" y2="19.3525"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#599146" />
+                            <stop offset="0.940185" stop-color="#99CD55" />
+                            <stop offset="1" stop-color="#99CD55" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+            <button id="nav_but" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span id="nav_img" class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Pesquisar -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn-comp btn-func my-2 my-sm-0 material-icons" type="submit">
+                        search
+                    </button>
+                </form>
+
+                <!-- Sair -->
+                <div>
+                    <button id="sair" class="btn-comp btn-func my-2 my-sm-0 material-icons">exit_to_app</button>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="dropdown-divider"></div>
+        </div>
+        <main>
+            <div id="fundo">
+                <div class="container-fluid">
+                    <h1 id="titulo"><span> Meus Anúncios /</span> Novo Produto</h1>
+
+                    <!-- Formulario -->
+                    <form id="form-prod" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Produto">Selecionar Produto</label>
+                                <select id="Produto" class="form-control">
+                                    <option selected>--</option>
+									<option>P-2</option>
+                                    <option>P-5</option>
+                                    <option>P-10</option>
+                                    <option>P-20</option>
+                                    <option>P-45</option>
+                                    <option>P-90</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Preco">Preço</label>
+                                <input type="text" data-prefix="R$ " data-thousands="." data-decimal="," class="preco form-control" id="Preco">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Codigo">Codigo Produto</label>
+                                <input type="number" id="Codigo" class="form-control">
+                                    
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="qtdEstoque">Quantidade de Estoque</label>
+                                <input type="number" class="form-control" id="qtdEstoque">
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <button type="button" class="btn-comp2 btn-func" id="cancelar">Cancelar</button>
+                            <button type="button" class="btn-comp btn-func" id="editar">Editar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="foot">
+            <span>2020 © Natural Foods LTDA.</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <script>
+        jQuery(function () {
+            jQuery('#Preco').maskMoney();
+        });
+    </script>
+    <script src="./js/EditarProd.js"></script>
+</body>
+
+</html>

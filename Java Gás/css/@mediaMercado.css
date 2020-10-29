@@ -1,0 +1,105 @@
+@media only screen and (max-width: 991px){
+    body{
+        height: 100%;
+    }
+
+    #laranja{
+        position: fixed;
+    }
+    
+    #navbarSupportedContent{
+        justify-content: unset;
+    }
+    
+    #navbarSupportedContent form{
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    #navbarSupportedContent form input{
+        width: 100%;
+        margin: 0;
+    }
+
+    #navbarSupportedContent form button{
+        display: none;
+    }
+
+    #adicionar{
+        text-decoration: none;
+        color: white;
+        background-color: rgb(255, 136, 0);
+        width: 100%;
+        text-align: center;
+        padding: 1vh 0;
+        border-radius: 8px;
+    }
+
+    #adicionar:hover{
+        background-color: rgb(255, 136, 0);
+    }
+
+    #fundo{
+        position: absolute;
+        overflow: auto;
+        margin-top: 0vh;
+    }
+
+    h5{
+        font-size: 15px;
+    }
+
+    #carta {
+        padding: 0px !important;
+    }
+
+    .info {
+        margin: 0px !important;
+    }
+
+    .card img{
+        width: 150px !important;
+        margin: 1vh 4vw;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .valor span{
+        position: absolute;
+        right: 4vw;
+    }
+
+    .carrinho{
+        position: absolute;
+        right: 4vw;
+    }
+
+    footer{
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 771px) {
+    .qtdcarrinho {
+        flex-direction: column;
+    }
+
+    .info{
+        margin-left: 0px !important;
+    }
+
+    .card img {
+        display: block !important;
+        margin: 15px auto !important;
+    }
+    
+    .info2-produtos {
+        margin-bottom: 0px;
+    }
+
+}

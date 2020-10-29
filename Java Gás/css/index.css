@@ -1,0 +1,100 @@
+body{
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.8);
+    background-size: cover;
+}
+
+.container-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 960px;
+    height: 100vh;
+    padding: 0px 15px;       
+}
+/* Configuração header*/
+
+#header-main {
+    border-bottom: 1px solid #FFFFFF;
+    width: 100%;    
+}
+
+#header-main img{
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+/* Configuração main: buttons*/
+
+main {
+    height: 100%;
+    padding-top:75px;
+}
+
+.btn{
+    width: 12.5em;
+    height: 2.75em;    
+}
+
+.btn.vender {
+    background-color:#00abf4 ;
+    border-color: #0afff1;
+    color: #fff;
+    font-size: 1.375em;
+    border: 2px;
+    border-radius: 5px;
+    margin-bottom: 35px !important;
+    transition: 0.3s;
+}
+
+.btn.comprar {
+    background-color: #0030ff ;
+    border-color: #385aec;
+    color: #fff;
+    font-size: 1.375em;
+    border: 2px;
+    border-radius: 5px;
+    margin-bottom: 35px !important;
+    transition: 0.3s;
+}
+
+.btn.comprar:hover, .btn.vender:hover {
+    transform: scale(1.05);
+}
+
+.titulo-button{
+    color: #fff;
+    font-size: 0.875em;
+    margin-bottom: 1px;
+}
+
+/* Configuração footer*/
+
+footer {
+    color: #FFFFFF;
+    width: 100vw;
+    display: flex;
+    justify-content: center !important;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+/* Media query*/
+
+@media (max-width: 767px) {
+    .row {
+      display: inline-block !important;
+    }
+  }
+

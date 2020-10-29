@@ -1,0 +1,14 @@
+
+@media only screen and (max-width: 991px){
+    #title{
+        font-size: 15px;
+    }
+    #preview{
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+
+    .buttons{
+        text-align: center;
+    }
+}

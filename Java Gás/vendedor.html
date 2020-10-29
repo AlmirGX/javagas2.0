@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender Produtos</title>
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/agricultor.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/@mediaAgr.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Overlay -->
+    <div id="verde">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="" id="logo">
+               <img src="img/logo12.svg" width="200px" height="200px" alt="java Gás">
+            </a>
+            <button id="nav_but" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span id="nav_img" class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Pesquisar -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0 material-icons" type="submit">
+                        search
+                    </button>
+                </form>
+
+                <!-- Adicionar produto -->
+                <div>
+				 <button id="adicionarfunc" class="btn-comp btn-func">Funcionários</a>
+                    <button id="adicionar" class="btn-comp btn-func">Adicionar Produto</a>
+                        <button id="sair" class="btn-comp btn-func my-2 my-sm-0 material-icons">exit_to_app</button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="dropdown-divider"></div>
+        </div>
+
+        <main>
+            <div id="fundo">
+                <div class="container-fluid">
+                    <h1 id="titulo">Meus Produtos</h1>
+                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3" id="corpo"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="foot">
+            <span>2020 ©Java Gás LTDA.</span>
+        </footer>
+    </div>
+
+    <!-- Scrits -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="js/vendedor.js"></script>
+    <script src="js/EditarProd.js"></script>
+    <script>
+        //direcionar para a tela de adicionar produto
+        var btnNovoProd = document.getElementById("adicionar");
+
+        btnNovoProd.addEventListener('click', () => {
+            location = 'AdicionarProd.html';
+        });
+		        var btnFunc = document.getElementById("adicionarfunc");
+
+        btnFunc.addEventListener('click', () => {
+            location = 'funcionarios.html';
+        });
+    </script>
+</body>
+
+</html>
